@@ -2,13 +2,13 @@
 
 <p>
   <strong>Titulo:</strong>
-  <%= @post.titulo.html_safe %>
+  <%= markdown(@post.titulo) %>
 </p>
 
 <p>
   <strong>Conteudo:</strong>
-  <%= @post.conteudo.html_safe %>
+  <%= markdown(@post.conteudo) %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Editar', edit_post_path(@post) %> |
+<%= link_to 'Voltar', posts_path %>
