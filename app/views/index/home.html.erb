@@ -4,7 +4,7 @@
 			<div id='container_list'>
 				<ul>
 					<% @posts.each do |p| %>
-						<li><a href="/posts/<%= p.id %>"> <%= p.titulo -%> </a> </li>
+						<li><a href="/show_post/<%= p.id %>"> <%= p.titulo -%> </a> </li>
 					<% end %>
 				</ul>
 			</div>
