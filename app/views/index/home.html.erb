@@ -1,5 +1,21 @@
 <html>
 	<body>
-		Olá mundo
+		<div id='container'>
+			<div id='container_list'>
+				<ul>
+					<% @posts.each do |p| %>
+						<li><a href="/posts/<%= p.id %>"> <%= p.titulo -%> </a> </li>
+					<% end %>
+				</ul>
+			</div>
+			<div id='conteudo'>
+				<% @posts.each do |p| %>
+					<div id='post'>
+						<div> <%= markdown(p.titulo) -%> </div>
+						<div> <%= markdown(p.conteudo) -%> </div>
+					</div>
+				<% end %>
+			</div>
+		</div>
 	</body>
 </html>
