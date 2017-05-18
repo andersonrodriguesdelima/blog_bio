@@ -4,6 +4,7 @@ class IndexController < ApplicationController
 	end
 
 	def show_post
+		@posts = Post.all
 		@post = Post.find(params[:id])
 	end
 end

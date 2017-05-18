@@ -1,13 +1,7 @@
 <html>
 	<body>
 		<div id='container'>
-			<div id='container_list'>
-				<ul>
-					<% @posts.each do |p| %>
-						<li><a href="/show_post/<%= p.id %>"> <%= p.titulo -%> </a> </li>
-					<% end %>
-				</ul>
-			</div>
+			<%= render 'list_posts' -%>
 			<div id='conteudo'>
 				<% @posts.each do |p| %>
 					<div id='post'>
