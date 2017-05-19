@@ -1,0 +1,8 @@
+<div id='container_list'>
+	<ul>
+		<li><a href="/"> Voltar para Home </a></li>
+		<% @posts.each do |p| %>
+			<li><a href="/show_post/<%= p.id %>"> <%= p.titulo -%> </a> </li>
+		<% end %>
+	</ul>
+</div>

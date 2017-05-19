@@ -1,0 +1,13 @@
+<html>
+	<body>
+		<div id='container'>
+			<%= render 'list_posts' -%>
+			<div id='conteudo'>
+				<div id='post'>
+					<div> <%= markdown(@post.titulo) -%> </div>
+					<div> <%= markdown(@post.conteudo) -%> </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
