@@ -4,8 +4,8 @@
 			<%= render 'list_posts' -%>
 			<div id='conteudo'>
 				<div id='post'>
-					<div> <%= markdown(@post.titulo) -%> </div>
-					<div> <%= markdown(@post.conteudo) -%> </div>
+					<div> <%= @post.titulo.html_safe -%> </div>
+					<div> <%= @post.conteudo.html_safe -%> </div>
 				</div>
 			</div>
 		</div>

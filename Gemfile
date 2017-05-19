@@ -57,3 +57,5 @@ group :development, :test do
 end
 
 gem 'redcarpet'
+
+gem 'sidekiq'
