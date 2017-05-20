@@ -1,5 +1,6 @@
 class MarkdownWorker
 	include Sidekiq::Worker
+	sidekiq_options retry: false
 
 	def perform(post_id, post_titulo, post_conteudo)
 		options = {
@@ -23,5 +24,6 @@ class MarkdownWorker
 		post.titulo = m.render(post_titulo)
 		post.conteudo = m.render(post_conteudo)
 		post.save!
+		sleep 2
 	end
 end

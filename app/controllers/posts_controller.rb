@@ -28,7 +28,6 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        MarkdownWorker.perform_async(@post.id, @post.titulo, @post.conteudo)
         format.html { redirect_to @post, notice: 'Post foi criado com sucesso.' }
         format.json { render :show, status: :created, location: @post }
       else
