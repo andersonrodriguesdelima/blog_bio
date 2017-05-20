@@ -13,10 +13,9 @@ RSpec.describe Post, type: :model do
 		@post.errors[:conteudo].first.eql? "não pode ser vazio"
 	end
 
-	it 'Deve processar o texto em markdown e retornar em html' do
+	it 'Deve processar o titulo em markdown e retornar em html' do
 		@post = Post.new(:titulo => "## Links", :conteudo => "Esses são os *links*")
 		@post.save!
-		expect(@post).to_not be_valid
-		expect(@post.titulo).eql? @post
+		expect(@post.titulo).to eq("## Links")
 	end
 end

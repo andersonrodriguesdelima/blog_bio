@@ -1,6 +1,5 @@
 class MarkdownWorker
 	include Sidekiq::Worker
-	sidekiq_options retry: false
 
 	def perform(post_id, post_titulo, post_conteudo)
 		options = {
@@ -21,9 +20,9 @@ class MarkdownWorker
 		renderer = Redcarpet::Render::HTML.new(options)
 		markdown = Redcarpet::Markdown.new(renderer, extensions)
 		m = Redcarpet::Markdown.new(renderer)
-		post.titulo = m.render(post_titulo)
-		post.conteudo = m.render(post_conteudo)
-		post.save!
-		sleep 2
+		post.update_attributes!(
+			:titulo => m.render(post_titulo),
+			:conteudo => m.render(post_conteudo)
+		)
 	end
 end
