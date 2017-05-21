@@ -59,3 +59,5 @@ end
 gem 'redcarpet'
 
 gem 'sidekiq'
+
+gem 'bcrypt'

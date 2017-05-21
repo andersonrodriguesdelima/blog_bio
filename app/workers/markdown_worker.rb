@@ -20,9 +20,6 @@ class MarkdownWorker
 		renderer = Redcarpet::Render::HTML.new(options)
 		markdown = Redcarpet::Markdown.new(renderer, extensions)
 		m = Redcarpet::Markdown.new(renderer)
-		post.update_attributes!(
-			:titulo => m.render(post_titulo),
-			:conteudo => m.render(post_conteudo)
-		)
+		post.update_attribute(:conteudo, m.render(post_conteudo))
 	end
 end

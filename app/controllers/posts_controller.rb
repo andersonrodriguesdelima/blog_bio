@@ -27,7 +27,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post foi criado com sucesso.' }
+        format.html { redirect_to "/show_post/#{@post.id}", notice: 'Post foi criado com sucesso.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
