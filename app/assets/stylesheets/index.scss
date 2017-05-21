@@ -4,7 +4,9 @@
 
 #container{width: 100%; display: table;}
 #menus{display: table-cell; width: 20%; vertical-align: top;}
-#container_list{width:20%; display: table-row; background-color: #E0E0E0;}
-#container_login{width:20%; display: table-cell; background-color: #E0E0E0; text-align: center;}
+#container_list{width:20%; display: table-cell; background-color: #FFFFFF;}
+#container_login{width:20%; display: table-cell; background-color: #FFFFFF; text-align: center; padding: 20px;}
 #conteudo{text-align: center; width: 80%; margin-left: 50px;}
-#post{background-color: #E0E0E0; padding: 5px 0px 5px 0px; margin-bottom: 30px;}
+#post{background-color: #FFFFFF; padding: 5px 0px 5px 0px; margin-bottom: 30px;}
+#body{background-color: #0B2F3A;}
+#container_list li{list-style-type: none;}

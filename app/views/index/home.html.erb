@@ -1,15 +1,16 @@
 <html>
-	<body>
+	<body id='body'>
 		<div id='container'>
 		<div id='menus'>
 			<%= render 'login' -%>
+			</br>
 			<%= render 'list_posts' -%>
 		</div>
 			<div id='conteudo'>
 				<% @posts.each do |p| %>
 					<div id='post'>
-						<div> <%= p.titulo.html_safe -%> </div>
-						<div> <%= p.conteudo.html_safe -%> </div>
+						<div class="titulo"> <%= p.titulo.html_safe -%> </div>
+						<div class="conteudo"> <%= p.conteudo.html_safe -%> </div>
 					</div>
 				<% end %>
 			</div>

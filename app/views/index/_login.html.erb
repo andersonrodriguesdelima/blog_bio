@@ -2,7 +2,7 @@
 <body>
 	<div id='container_login'>
 		<% if current_user %>
-			Olá <%= current_user.nome -%></br>email: <%= current_user.email -%></br>
+			Olá <%= current_user.nome.capitalize -%></br>E-mail: <%= current_user.email -%></br>
 			<a href="/posts/new">Criar novo post</a> | <%= link_to "Sair", sign_out_path, method: "delete" %>
 		<% else %>
 			<a href="/sessions/new">Login</a> | <a href="/usuarios/new">Cadastre-se</a>
