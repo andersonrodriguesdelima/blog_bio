@@ -1,6 +1,6 @@
 <html>
 <body>
-	<div>
+	<div id='container_login'>
 		<% if current_user %>
 			Olá <%= current_user.nome -%></br>email: <%= current_user.email -%></br>
 			<a href="/posts/new">Criar novo post</a> | <%= link_to "Sair", sign_out_path, method: "delete" %>
