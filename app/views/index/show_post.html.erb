@@ -6,6 +6,7 @@
 				<div id='post'>
 					<div> <%= @post.titulo.html_safe -%> </div>
 					<div> <%= @post.conteudo.html_safe -%> </div>
+					<div> Criado por: <%= @post.usuario_id -%> </div>
 				</div>
 			</div>
 		</div>
