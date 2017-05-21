@@ -1,12 +1,16 @@
 <html>
-	<body>
+	<body id='body'>
 		<div id='container'>
-			<%= render 'list_posts' -%>
+			<div id='menus'>
+				<%= render 'login' -%>
+				</br>
+				<%= render 'list_posts' -%>
+			</div>
 			<div id='conteudo'>
 				<div id='post'>
-					<div> <%= @post.titulo.html_safe -%> </div>
-					<div> <%= @post.conteudo.html_safe -%> </div>
-					<div> Criado por: <%= @post.try(:usuario).try(:nome) -%> | <%= @post.created_at.strftime("Criado em %d/%m/%Y - %H:%M h") -%> </div>
+					<div class='titulo'> <%= @post.titulo.html_safe -%> </div>
+					<div class='titulo'> <%= @post.conteudo.html_safe -%> </div>
+					<div class='post_info'> Criado por: <%= @post.try(:usuario).try(:nome).try(:capitalize) -%> | <%= @post.created_at.strftime("Criado em %d/%m/%Y - %H:%M h") -%> </div>
 				</div>
 			</div>
 		</div>
