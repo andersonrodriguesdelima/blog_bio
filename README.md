@@ -33,5 +33,3 @@ Implementar uma ferramenta de autenticação, assim os posts não ficam sem um d
 Fazer testes de integração usando ferramentas especializadas
 Caprichar na estilização da página
 Nos surpreender com alguma implementação que melhore o fluxo para o usuário
-
-teste-clone
