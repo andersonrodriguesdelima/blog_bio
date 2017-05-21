@@ -1,12 +1,6 @@
 <html>
 	<body>
-		<div>
-			<% if current_user %>
-				<a href="/posts/new">Criar novo post</a> | <%= link_to "Sair", sign_out_path, method: "delete" %>
-			<% else %>
-				<a href="/sessions/new">Login</a> | <a href="/usuarios/new">Cadastre-se</a>
-			<% end -%>
-		</div>
+		<%= render 'login' -%>
 		<div id='container'>
 			<%= render 'list_posts' -%>
 			<div id='conteudo'>

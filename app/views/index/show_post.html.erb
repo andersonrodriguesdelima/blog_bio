@@ -6,7 +6,7 @@
 				<div id='post'>
 					<div> <%= @post.titulo.html_safe -%> </div>
 					<div> <%= @post.conteudo.html_safe -%> </div>
-					<div> Criado por: <%= @post.usuario_id -%> </div>
+					<div> Criado por: <%= @post.try(:usuario).try(:nome) -%> | <%= @post.created_at.strftime("Criado em %d/%m/%Y - %H:%M h") -%> </div>
 				</div>
 			</div>
 		</div>

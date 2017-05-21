@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20170521144730) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "usuario_id"
-    t.index ["usuario_id"], name: "index_posts_on_usuario_id", using: :btree
   end
 
   create_table "usuarios", force: :cascade do |t|

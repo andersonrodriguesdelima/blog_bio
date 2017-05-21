@@ -5,9 +5,8 @@ class UsuariosController < ApplicationController
   def create
     @user = Usuario.new(user_params)
     if @user.save
-      redirect_to @user, notice: "Usuário foi criado com sucesso!"
+      redirect_to root_url, notice: "Usuário foi criado com sucesso!"
       sign_in(@user)
-      redirect_to root_url
     else 
       render action: :new
     end
