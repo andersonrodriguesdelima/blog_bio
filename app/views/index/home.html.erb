@@ -1,8 +1,10 @@
 <html>
 	<body>
 		<div id='container'>
+		<div id='menus'>
 			<%= render 'login' -%>
 			<%= render 'list_posts' -%>
+		</div>
 			<div id='conteudo'>
 				<% @posts.each do |p| %>
 					<div id='post'>
