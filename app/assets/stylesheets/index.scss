@@ -5,11 +5,12 @@
 #container{width: 100%; display: table;}
 #menus{display: table-cell; width: 20%; vertical-align: top;}
 #container_list{width:20%; display: table-cell; background-color: #FFFFFF;}
-#container_login{width:20%; display: table-cell; background-color: #FFFFFF; text-align: center; padding: 20px;}
+#container_login{width:20%; display: table-cell; background-color: #FFFFFF; text-align: center; padding: 20px; font-size: 16px;}
 #conteudo{text-align: center; width: 80%; margin-left: 50px;}
 #post{background-color: #FFFFFF; padding: 5px 0px 5px 0px; margin-bottom: 30px;}
 #body{background-color: #0B2F3A;}
-#container_list li{list-style-type: none;}
+#container_list li{list-style-type: none; font-size: 16px; font: menu;}
 .titulo{font-size: 30px; margin: 15px;}
-.conteudo{}
 .post_info {margin: 10px; padding-top: 50px;}
+#post_new{background-color: #FFFFFF; padding: 5px 0px 5px 0px; text-align: center; width: 60%; height: 600px; vertical-align: middle; display:table; margin-left:20%;}
+#session_new{background-color: #FFFFFF; padding: 5px 0px 5px 0px; text-align: center; width: 60%; display:table; margin: 5% 0 0 20%;}

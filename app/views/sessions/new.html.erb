@@ -1,15 +1,21 @@
+<html>
+<body id='body'>
+<div id='session_new'>
 <%= form_for :session, url: sign_in_path do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
+  <div class="field_session">
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
-  <div class="field">
-    <%= f.label :senha %><br />
+  <div class="field_session">
+    <%= f.label :senha %>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
-  <div class="actions">
+  <div class="actions_session">
     <%= f.submit "Log in" %>
   </div>
   Novo por aqui? <%= link_to "Cadastre-se!", new_usuario_path %>
 <% end %>
+</div>
+</body>
+</html>

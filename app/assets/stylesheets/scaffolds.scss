@@ -45,7 +45,13 @@ td {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+div {
+  &.field_session, &.actions_session {
+    margin-bottom: 15px;
   }
 }
 
