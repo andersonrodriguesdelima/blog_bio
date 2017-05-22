@@ -13,7 +13,7 @@
 				<% else %>
 					<% @posts.each do |p| %>
 							<div class="titulo"> <%= p.titulo.html_safe -%> </div>
-							<div class="conteudo"> <%= p.conteudo.html_safe -%> </div>
+							<div> <%= p.conteudo.html_safe -%> </div>
 					<% end -%>
 				<% end %>
 				</div>

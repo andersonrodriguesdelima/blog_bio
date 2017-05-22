@@ -9,7 +9,7 @@
 			<div id='conteudo'>
 				<div id='post'>
 					<div class='titulo'> <%= @post.titulo.html_safe -%> </div>
-					<div class='titulo'> <%= @post.conteudo.html_safe -%> </div>
+					<div> <%= @post.conteudo.html_safe -%> </div>
 					<div class='post_info'> Criado por: <%= @post.try(:usuario).try(:nome).try(:capitalize) -%> | <%= @post.created_at.strftime("Criado em %d/%m/%Y - %H:%M h") -%> </div>
 				</div>
 			</div>
