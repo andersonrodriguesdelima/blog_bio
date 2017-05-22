@@ -7,12 +7,16 @@
 			<%= render 'list_posts' -%>
 		</div>
 			<div id='conteudo'>
-				<% @posts.each do |p| %>
-					<div id='post'>
-						<div class="titulo"> <%= p.titulo.html_safe -%> </div>
-						<div class="conteudo"> <%= p.conteudo.html_safe -%> </div>
-					</div>
+				<div id='post'>
+				<% if @posts.empty? -%>
+					<p>Não existe nenhum post cadastrado.</p>
+				<% else %>
+					<% @posts.each do |p| %>
+							<div class="titulo"> <%= p.titulo.html_safe -%> </div>
+							<div class="conteudo"> <%= p.conteudo.html_safe -%> </div>
+					<% end -%>
 				<% end %>
+				</div>
 			</div>
 		</div>
 	</body>
