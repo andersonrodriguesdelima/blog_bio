@@ -1,6 +1,7 @@
 <div id='container_list'>
 	<ul>
-		<li><a href="/"> Home </a></li>
+		<li><a href="/">Home</a></li></br></br>
+		Leia os posts:
 		<% @posts.each do |p| %>
 			<li><a href="/show_post/<%= p.id %>"> <%= p.titulo -%> </a> </li>
 		<% end %>

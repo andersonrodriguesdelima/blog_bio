@@ -1,3 +1,6 @@
+<html>
+<body id='body'>
+<div id='session_new'>
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -34,3 +37,6 @@
     Já é cadastrado? <%= link_to "Faça seu login!", sign_in_path %>
   </div>
 <% end %>
+</div>
+</body>
+</html>
